@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Directory Structure</title>
+</head>
+<body>
+<div>
+    <h2>Directory Structure</h2>
+    <div th:fragment="folder(folder)">
+        <p th:text="${folder.name}"></p>
+        <ul>
+            <li th:each="subFolder : ${folder.subFolders}">
+                <div th:replace="this::folder(${subFolder})"></div>
+            </li>
+            <li th:each="file : ${folder.files}" th:text="${file}"></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

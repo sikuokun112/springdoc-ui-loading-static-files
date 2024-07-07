@@ -1,2 +1,2 @@
-# springdoc-ui-loading-static-files
-a Springboot application to load external openAPI &amp; showing on UI
+# springfox-ui-from-file
+Springfox UI load external OpenAPI (Swagger) JSON or YAML file.
